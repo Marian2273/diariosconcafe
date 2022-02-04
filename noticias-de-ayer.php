@@ -9,13 +9,14 @@
       <!-- The header content -->
      
 </section>
+
        <!-- Resumen -->
 <section class="resumen">
     <div class="container">
         <div class="row">
            <div class="col-md-12 col-sm-12">
     <h4>
-        <img src="img/cafecito.png" alt="diarios con café"></h4>
+        <img src="img/cafecito.png" alt="diarios con café" ></h4>
         <p>
             <strong>Estamos creando un archivo</strong>, un registro sintético de (lo que dicen los
             medios sobre) la realidad diaria del país. En esta sección te mostramos, a modo
@@ -53,7 +54,7 @@
         <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
         <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
         <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
-        <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
+       
         </ul>
         <ul class="col-md-4 ">
           <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
@@ -66,7 +67,7 @@
           <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
           <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
           <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
-          <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
+         
           </ul>
           <ul class="col-md-4 ">
             <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
@@ -79,7 +80,7 @@
             <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
             <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
             <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
-            <li> <div class="campaign">01/18/2022 - <a href="http://us1.campaign-archive.com/?u=50d1b98d85b86ac4d7edaaade&amp;id=c3584b6bab" title="Martes 18 de Enero, 2022" target="_blank">Martes 18 de Enero, 2022</a></div></li> 
+           
             </ul>
         </div>
     </div>

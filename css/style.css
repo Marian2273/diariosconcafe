@@ -100,9 +100,13 @@ font header .navbar-default .navbar-nav li a:hover {
   position: relative;
 } */
 #slider1 {
-  background: url("../img/intro-img.jpg") no-repeat;
-  height: 561px;
- 
+  background: url("../img/intro-img.jpg") no-repeat ; 
+  
+  background-size: cover;
+  
+  background-position: 50% 50%;
+  height: 540px;
+  position: relative;
 }
 #slider:before {
   content: "";
@@ -1144,14 +1148,6 @@ margin-bottom: 20px;
   margin-bottom: 40px;
   font-style: italic;
 }
-#owl-demo .owl-item div{
-  padding:5px;
-}
-#owl-demo .owl-item img{
-  display: block;
-  width: 100%;
-  height: auto;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+.carousel-control.right,.carousel-control.left {
+  background-image: none;
 }
