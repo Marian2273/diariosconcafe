@@ -60,7 +60,7 @@ a:active {
 --*/
 header {
  
-  padding: 20px 0;
+  padding:0px 0px 20px 0;
 }
 header .navbar {
   margin-bottom: 0px;
@@ -101,12 +101,13 @@ font header .navbar-default .navbar-nav li a:hover {
 } */
 #slider1 {
   background: url("../img/intro-img.jpg") no-repeat ; 
-  
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  
-  background-position: 50% 50%;
-  height: 540px;
-  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-height: 70vh;
 }
 #slider:before {
   content: "";
@@ -814,6 +815,25 @@ footer .footer-manu ul li a:hover {
 }
 
 /* Agregado */
+/* Sección botonera arriba */
+.franja-login{
+  background-color:#212121;
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+.semana-de-prueba{
+ 
+ padding:10px 15px;
+}
+.semana-de-prueba a, .seccion-usuarios a{
+  color:#fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.seccion-usuarios{
+  text-align: right;
+  padding:10px 15px;
+}
 
 .header-all{
   background-image: url(../img/papel-bg.jpg);
@@ -943,9 +963,7 @@ font-family: 'Montserrat', sans-serif;  font-weight: 500;
 
   
 }
-.reproductor{
- 
-}
+
 .resumen{
   background-color:#212121;
   padding-top:4em;
@@ -1147,7 +1165,4 @@ margin-bottom: 20px;
   margin-top:20px;
   margin-bottom: 40px;
   font-style: italic;
-}
-.carousel-control.right,.carousel-control.left {
-  background-image: none;
 }

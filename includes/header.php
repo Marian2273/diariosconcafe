@@ -1,3 +1,4 @@
+<?php include('functions/functions.php');?>
 <!DOCTYPE html>
 <html class="no-js">
   <head>
@@ -43,7 +44,7 @@
     <script src="js/main.js"></script>
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
 
   </head>
   <body>
@@ -53,9 +54,34 @@
     <!-- Header Start -->
     <section class="header-all">
   <header>
+    <!--- Topbar Start -->
+<div class="franja-login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="col-md-6 semana-de-prueba"> <a data-fancybox data-type="ajax" data-src="mail.php" href="javascript:;">
+                Semana de prueba
+                </a></div>
+                <div class="col-md-6 seccion-usuarios">
+                <?php if($user_kiara !=''){ ?>
+						<a href="perfil-usuario.php" class="perfil" > Perfil Usuario </a> 
+					
+						<a href="functions/logout.php" class="cerrar-sesion"> Cerrar Sesión </a>
+						<?php }else{ ?>
+						<a href="ingresar.php" class="sesion"> Iniciar Sesión </a> <span> |</span>
+						<a href="registro.php" class="registro" >Registrarse</a>
+						<?php } ?>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--- Topbar End -->
     <div class="container-fluid">
+  
       <div class="row">
+      
         <div class="col-md-12">
           <!-- header Nav Start -->
           <nav class="navbar navbar-default">

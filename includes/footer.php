@@ -80,6 +80,5 @@
 </footer>
 <script type='text/javascript' src='js/accordion.js'></script>
 
-
 </body>
 </html>
