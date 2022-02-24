@@ -15,7 +15,7 @@
                 <h6>Resumen y audio por WhatsApp</h6>
                 <p>Cada mañana te llega nuestro análisis de las noticias más relevantes con claves de lectura.
                 </p>
-                <a href="ver-suscripciones.php" class="btn btn-info btn-verde-sus ">
+                <a href="ver-suscripciones-expreso.php" class="btn btn-info btn-verde-sus ">
                     AR$ 400 / €3
                 </a>
             </div>
@@ -29,7 +29,7 @@
             <p>Con el informe diario, recibís en tu casilla todos los links directos a los artículos de los medios relevados.
 
           </p>
-            <a href="ver-suscripciones.php" class="btn btn-info btn-verde-sus ">
+            <a href="ver-suscripciones-cortado.php" class="btn btn-info btn-verde-sus ">
                 AR$ 700 / €5  
             </a>
           </div>
@@ -42,7 +42,7 @@
                   <p>El análisis y los links a tu correo y el informe al WhatsApp, para que cada día elijas cómo informarte.
                     
                 </p>
-                  <a href="ver-suscripciones.php" class="btn btn-info btn-verde-sus ">
+                  <a href="ver-suscripciones-con´leche.php" class="btn btn-info btn-verde-sus ">
                       AR$ 750 / €6  
                   </a>
                   </div>
@@ -68,7 +68,7 @@
              <h4>Suscripción Grupal</h4>
              <p><strong>¡Para todas y todos! </strong>Si tenés un grupo de trabajo, familiar, de amistades, de deporte... lo que sea. Te ofrecemos un ofertón de <strong>cinco suscripciones con doble envío  </strong>para que la experiencia Diarios con Café se siga expandiendo.
 </p>
-             <a href="ver-suscripciones.php" class="btn btn-info btn-verde-grupo ">
+             <a href="ver-suscripciones-grupal.php" class="btn btn-info btn-verde-grupo ">
               AR$ 2000 / €15  
           </a>
                   

@@ -79,6 +79,13 @@
 </div>
 </footer>
 <script type='text/javascript' src='js/accordion.js'></script>
-
+<script src="js/jquery.form.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/form-active.js"></script>
+<script src="js/validador-registro.js"></script>
+<script src="js/validador-contacto.js"></script>
+<script src="js/validador-login.js"></script>
+<script src="js/validador-olvido.js"></script>
+<?php echo $captcha;?>
 </body>
 </html>

@@ -17,7 +17,8 @@ use voku\helper\AntiXSS;
 require_once __DIR__ . '/vendor/autoload.php'; // example path
 $antiXss = new AntiXSS();
 
-
+//Usuarios
+$user_cafe=$_SESSION["user_cafe"];
 
 // conect
 include("config/connect.php"); 
@@ -50,7 +51,109 @@ include("config/connect.php");
                
                 }
               }
-              
+  
+     //Get Level
+if (!function_exists('get_level')) {
+  function get_level() {
+      global $mysqli;
+    
+          $query="SELECT * FROM niveles  ORDER BY name ASC";
+          $result = mysqli_query($mysqli,$query) ;
+          while ($row = mysqli_fetch_assoc($result)) {
+              echo '<option value="'.$row['id'].'">'.$row['name'].'</option>';
+          }
+ 
+  }
+}
+
+//Get User Info
+if (!function_exists('get_user_info')) {
+  function get_user_info($id, $name) {
+      global $mysqli;
+      $id=$id;
+      $name=$name;
+          $query="SELECT * FROM usuarios WHERE id LIKE $id";
+          $result = mysqli_query($mysqli,$query) ;
+          while ($row = mysqli_fetch_assoc($result)) {
+            
+              if ($name == $name) {
+                  return $row[$name];
+              }
+          }
+ 
+  }
+}
+//Send Notification
+if (!function_exists('send_notification')) {
+  function send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url) {
+      global $mysqli;
+
+      $id_user= $id_user;
+      $subject = $subject;
+      $mail_tem= $mail_tem;
+      $sec_code= $sec_code;
+      //SMTP
+      $smtp =$smtp;
+      $userName = $userName;
+      $pass= $pass;
+      $port = $port;
+      $url = $url;
+      //Users
+      $name =get_user_info($id_user, 'nombre');
+      $lastname =get_user_info($id_user, 'apellido');
+      $email =get_user_info($id_user, 'email');
+
+
+      require("class.phpmailer.php");
+      $mail = new PHPMailer();
+      //Luego tenemos que iniciar la validación por SMTP:
+
+      $mail -> IsSMTP();
+      $mail -> SMTPAuth = true;
+      $mail -> Host = $smtp; // SMTP a utilizar. Por ej. smtp.elserver.com
+      $mail -> Username =   $userName; // Correo completo a utilizar
+      $mail -> Password =$pass; // Contraseña
+      $mail -> Port = $port; // Puerto a utilizar
+
+      $mail -> From =   $userName; // Desde donde enviamos (Para mostrar)
+      $mail -> FromName = "Notificaciones Inés Waiss";
+      $mail -> AddAddress($email); // Esta es la dirección a donde enviamos
+      //$mail->AddCC("cuenta@dominio.com"); 
+      // $mail->AddBCC("marianabelgrano@hotmail.com");  Copia oculta para esssaaabel
+      $mail -> CharSet = 'UTF-8';
+      $mail -> IsHTML(true); // El correo se envía como HTML
+      $mail -> Subject = $subject; // Este es el titulo del email.
+    
+
+      $body = file_get_contents($mail_tem);
+      //$body = preg_replace("[\]",'',$body); setup vars to replace
+      $vars = array('{id_user}', '{name}', '{sec_code}', '{email}', '{url}');
+      $values = array($id_user, $name.' '.$lastname, $sec_code, $email, $url);
+
+   //replace vars
+      $body = str_replace($vars,$values,$body);
+
+      //add the html tot the body
+      $mail->MsgHTML($body);
+
+      $mail->Body = $body; // Mensaje a enviar
+      $exito = $mail->Send(); // Envía el correo.
+      $mail->ClearAddresses();  
+
+      if ($exito) {
+          echo "true";
+
+      } else {
+          echo  "Error: ".$mail->ErrorInfo;
+      }
+  }
+} 
+
+
+              // Captcha
+ if($filename =='registro.php' or $filename =='contacto.php' or $filename == 'ingresar.php' or $filename == 'olvido-su-clave.php' or $filename == 'cuenta.php'){
+$captcha='<script src="https://www.google.com/recaptcha/api.js?render=6Le03n0eAAAAAPvJr46Tq6U9BnQpMEICuIJNy1rK"></script>';
+            }      
 /*
 // Get Admin Info
 if (!function_exists('get_admin')) {
