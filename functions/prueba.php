@@ -3,7 +3,7 @@
 
 $email = 'mm@mm.com';
 $list_id = '01db3626e5';
-$api_key = '391b6f6db8a1165f12baf55cb7e766e8-us5';
+$api_key = '';
 $nombre='Mariana';
 $apellido='Belgrano';
 //b11102d355 (suscripcion) (ID de la lista)

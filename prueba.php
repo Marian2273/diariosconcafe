@@ -1,7 +1,7 @@
 <?php
 $email = 'juanperez@dd.com';
 $list_id = '01db3626e5';
-$api_key = '391b6f6db8a1165f12baf55cb7e766e8-us5';
+$api_key = '';
 $nombre='Juan';
 $apellido='Pérez';
 //b11102d355 (suscripcion)
