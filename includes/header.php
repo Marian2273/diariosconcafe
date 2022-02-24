@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Diarios con café   - </title>
+    <title> Diarios con café   </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -89,7 +89,7 @@
               <div class="row">
                 <div class="col-md-12 logo-arriba">
                   <a class="" href="index.php" >
-                    <img src="img/logo.png" alt="Diarios con Café" class="img-responsive">
+                    <img src="img/header-logo.png" alt="Diarios con Café" class="img-responsive">
                   </a>
                 </div>
               </div>
@@ -123,9 +123,9 @@
     <ul class="nav navbar-nav navbar-center">
       <li class="active"><a href="index.php">TAPAS DE HOY</a></li>
       <li><a href="noticias-de-ayer.php">NOTICIAS DE AYER</a></li>
-      <li><a href="domingos-ilustrados.php">DOMINGOS ILUSTARDOS</a></li>
+      <li><a href="domingos-ilustrados.php">DOMINGOS ILUSTRADOS</a></li>
       <li><a href="conocenos.php">CONOCENOS</a></li>
-      <li><a href="quiero-suscribirme.php">¡QUIERO SUSCRIBIRME!</a></li>
+      <li class="sus" ><a href="quiero-suscribirme.php">¡QUIERO SUSCRIBIRME!</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </div>

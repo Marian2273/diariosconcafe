@@ -842,6 +842,7 @@ footer .footer-manu ul li a:hover {
   background-color:#212121;
  
 }
+
 .semana-de-prueba{
  
  padding:10px 15px;
@@ -861,6 +862,8 @@ footer .footer-manu ul li a:hover {
 }
 .logo-arriba{
   text-align: center;
+  
+  margin-top: 20px;
 }
 .logo-arriba a{
   margin: auto;
@@ -884,7 +887,10 @@ font-size: 18px;
 font-family: 'Montserrat', sans-serif;  font-weight: 500;
 }
 .nav>li>a:hover, .nav>li>a:focus{
-  background-color: #464444;
+  background-color: #212121;
+}
+.botonera .navbar-nav .sus {
+  background-color: #018d7b;
 }
 #slider {
   position: relative;

@@ -11,7 +11,7 @@
                                 alt="Diarios con Café"
                                 class="img-responsive cafe-footer"></li>
                             <li>
-                                <a href="#">Tapa de Hoy</a>
+                                <a href="#">Tapas de Ayer</a>
                             </li>
                             <li>
                                 <a href="#">Noticias de Ayer</a>
