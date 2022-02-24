@@ -30,6 +30,7 @@ h3 {
 p {
   font-size: 15px;
   line-height: 28px;
+  font-family: 'Montserrat', sans-serif;
 }
 ul {
   padding: 0;
@@ -107,7 +108,9 @@ font header .navbar-default .navbar-nav li a:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  min-height: 70vh;
+  height: 600px;
+
+ 
 }
 #slider:before {
   content: "";
@@ -967,25 +970,27 @@ font-family: 'Montserrat', sans-serif;  font-weight: 500;
 #audio {
   padding-top: 10px;
   padding-bottom: 10px;
-    }
+ 
+}
+#audio .reproductor {
+  padding-top: 10px;
+  text-align: center;
+}
 .cafecito {
     margin-top: 0px;
     float: left;
 
 }
-.cafecito img {
 
-    float: right;
-
-}
 .fraja-negra{
   background-color: #000;
   padding-top: 0px;
   padding-bottom: 10px;
+  text-align: center;
 } 
 .fraja-negra h3{
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
 
   
@@ -999,9 +1004,17 @@ font-family: 'Montserrat', sans-serif;  font-weight: 500;
 }
 .resumen h4{
   text-align: center;
+  
+}
+.resumen .icono-cafe{
+  
+  width: 90px;
+  margin-bottom: 40px;
 }
 .resumen p{
   text-align:justify;
+  padding: 5px 40px;
+ 
 }
 .diarios{
   background-image: url(../img/papel-bg.jpg);
@@ -1128,14 +1141,14 @@ footer .footer-manu ul .zoom-social_icons-list__item
 .listado-noticias{
   text-align: left;
   margin-bottom: 120px;
-  
+  width: 100%;
   float: left;
   height: auto;
-
+  
 }
 .listado-noticias .campaign {
   line-height: 200%;
-  margin: 10px;
+  margin: 10px 22px;
   
  
 }

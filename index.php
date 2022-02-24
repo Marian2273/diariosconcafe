@@ -27,10 +27,8 @@
     <section id="audio">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 col-sm-12 cafecito">
-           <img src="img/cafecito.png" alt="Diarios con Café" class="img-responsive">
-          </div><!-- .col-md-7 close -->
-          <div class="col-md-7 col-sm-12 reproductor">
+         
+          <div class="col-md-12 col-sm-12 reproductor">
             <iframe src="https://anchor.fm/diarios-con-caf/embed" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
           </div><!-- .col-md-5 close -->
         </div>
@@ -50,7 +48,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <h4>
-                    <img src="img/cafecito.png" alt="diarios con café"></h4>
+                    <img src="img/cafecito.png" alt="diarios con café" class="icono-cafe" ></h4>
                     <p>
                       <strong>Diarios con Café: </strong>un resumen con lo más destacado de los medios locales; <strong>una síntesis con tono amable y fresco</strong> para poder informarte de modo rápido y no por ello menos riguroso.
 

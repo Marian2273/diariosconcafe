@@ -11,19 +11,19 @@
                                 alt="Diarios con Café"
                                 class="img-responsive cafe-footer"></li>
                             <li>
-                                <a href="#">Tapas de Ayer</a>
+                                <a href="index.php">Tapas de Ayer</a>
                             </li>
                             <li>
-                                <a href="#">Noticias de Ayer</a>
+                                <a href="noticias-de-ayer.php">Noticias de Ayer</a>
                             </li>
                             <li>
-                                <a href="#">Domingos ilustrados</a>
+                                <a href="domingos-ilustrados.php">Domingos ilustrados</a>
                             </li>
                             <li>
-                                <a href="#">Conocenos</a>
+                                <a href="conocenos.php">Conocenos</a>
                             </li>
                             <li>
-                                <a href="#">Suscripciones</a>
+                                <a href="quiero-suscribirme.php">Suscripciones</a>
                             </li>
 
                             <li class="zoom-social_icons-list__item">

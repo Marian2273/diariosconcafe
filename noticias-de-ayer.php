@@ -16,7 +16,7 @@
         <div class="row">
            <div class="col-md-12 col-sm-12">
     <h4>
-        <img src="img/cafecito.png" alt="diarios con café" ></h4>
+        <img src="img/cafecito.png" alt="diarios con café" class="icono-cafe" ></h4>
         <p>
             <strong>Estamos creando un archivo</strong>, un registro sintético de (lo que dicen los
             medios sobre) la realidad diaria del país. En esta sección te mostramos, a modo
@@ -35,6 +35,7 @@
         <p>Por último, podrás ver que cada domingo dibujamos las noticias más
             relevantes; si te interesa esta síntesis visual, podés verlas todas en la
             sección Domingos Ilustrados
+            
         </p>
         <hr>  
         <div class="listado-noticias">
