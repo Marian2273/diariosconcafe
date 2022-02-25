@@ -1138,6 +1138,9 @@ footer .footer-manu ul .zoom-social_icons-list__item
 .verde{
   color:#0fe3bc;
 }
+.verde:hover{
+  color:#018d7b;
+}
 .listado-noticias{
   text-align: left;
   margin-bottom: 120px;
@@ -1187,6 +1190,8 @@ footer .footer-manu ul .zoom-social_icons-list__item
   color:#21211f;
   margin-top:20px;
 margin-bottom: 20px;
+font-size: 21px;
+font-weight: 600;
 }
 .nosotros .texto h4{
   color:#008f7a;
@@ -1273,4 +1278,8 @@ margin-bottom: 20px;
  .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label{
    text-align: left;
    color: #fff;
+ }
+ /* Terminos y condiciones */
+ .p-parrafo{
+   margin-top:50px;
  }

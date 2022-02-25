@@ -19,18 +19,11 @@
 <strong>¿Qué es Diarios con Café?</strong></h4>
 <div id="ac-4870" class="c-accordion__content">
 <p>Es un resumen diario con lo más destacado de los medios nacionales que llega a tu celular o a tu compu.</p>
-
-
-
-<p>Un «producto» que nace con ambición de ser un servicio accesible y práctico para que sepas de qué hablan en el colectivo, en la mesa de al lado en el bar, en la radio, en la tele, en las redes&#8230;.de qué se está hablando cada día&#8230;y por dónde viene la discusión general.&nbsp;</p>
-
-
-
-<p>En un mar de informaciones que circulan con más intencionalidad política o comercial que informativa, creemos que «Diarios con Café» sirve como una «foto» o «mapa» de lo que hay en la agenda informativa de la jornada.</p>
-
-
-
-<p>Te contamos además que somos autogestivos y no contamos con sponsors&#8230;así que dependemos de los lectores para poder sostener la iniciativa.</p>
+<p>Un «producto» que nace con ambición de ser un servicio accesible y práctico para que sepas de qué hablan en el colectivo, en la mesa de al lado en el bar, en la radio, en la tele, en las redes….de qué se está hablando cada día…y por dónde viene la discusión general. </p>
+<p>En un mar de informaciones que circulan con más intencionalidad política o comercial que informativa, creemos que «Diarios con Café» sirve como una «foto» o «mapa» de lo que hay en la agenda informativa de la jornada.
+</p>
+<p>Te contamos además que somos autogestivos y no contamos con sponsors…así que dependemos de los lectores para poder sostener la iniciativa.
+    </p>
 </div>
 </div>
 
@@ -40,8 +33,9 @@
 
 
 
-<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h4 id="at-411" class="c-accordion__title js-accordion-controller" role="button"><strong>¿Por qué leernos?</h4></strong><div id="ac-411" class="c-accordion__content">
-<p>Para saber lo que está pasando y de qué se habla en los medios nacionales &#8211; relevamos Clarín, Nación, Página 12, Cronista, Ámbito Financiero, BAE, Perfil, Tiempo, Popular y Crónica; así como los portales de Infobae y Minuto Uno. En menos de 10 minutos tenés el panorama completo de «lo que pasa» en los medios.</p>
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h4 id="at-411" class="c-accordion__title js-accordion-controller" role="button"><strong>¿Por qué lo hacemos?</h4></strong><div id="ac-411" class="c-accordion__content">
+<p>Para saber lo que está pasando y de qué se habla en los medios nacionales – relevamos Clarín, Nación, Página 12, Cronista, Ámbito Financiero, BAE, Perfil, Tiempo, Popular y Crónica; así como la Agencia oficial Télam y los portales de Infobae, Minuto Uno y La Política On Line. En menos de 10 minutos tenés el panorama completo de «lo que pasa» en los medios.
+</p>
 </div></div>
 
 
@@ -50,12 +44,10 @@
 
 
 
-<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h4 id="at-412" class="c-accordion__title js-accordion-controller" role="button"><strong>¿Por qué hacemos Diarios con Café?</strong></h4><div id="ac-412" class="c-accordion__content">
-<p>Creemos que «estar informados» es clave a la hora de tomar decisiones, saber dónde estamos parados, dar las batallas en las que creamos o conocer los escenarios de modo más global. Este proyecto pretende parar la pelota de la información incesante, mirar por dónde va la corriente y advertir cómo viene la mano y por dónde circulan los debates&#8230;hasta la mañana siguiente que volvemos a sentarnos a leer (ó escuchar) Diarios con Café.&nbsp;</p>
-
-
-
-<p>Con un tono amable y una mirada abierta a los planteos diversos que se disputan en el escenario de la política, la economía, la cultura y el «sentido común», Diarios con Café quiere surcar ese camino que contenga todas las voces y las muestre con estilo propio y alguna sonrisa.</p>
+<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h4 id="at-412" class="c-accordion__title js-accordion-controller" role="button"><strong>¿A quién está dirigido?</strong></h4><div id="ac-412" class="c-accordion__content">
+<p>Creemos que «estar informados» es clave a la hora de tomar decisiones, saber dónde estamos parados, dar las batallas en las que creamos o conocer los escenarios de modo más global. Este proyecto pretende parar la pelota de la información incesante, mirar por dónde va la corriente y advertir cómo viene la mano y por dónde circulan los debates…hasta la mañana siguiente que volvemos a sentarnos a leer (ó escuchar) Diarios con Café.</p>
+<p>Con un tono amable y una mirada abierta a los planteos diversos que se disputan en el escenario de la política, la economía, la cultura y el «sentido común», Diarios con Café quiere surcar ese camino que contenga todas las voces y las muestre con estilo propio y alguna sonrisa.
+</p>
 </div></div>
 
 
@@ -64,10 +56,8 @@
 
 
 
-<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h4 id="at-413" class="c-accordion__title js-accordion-controller" role="button"><strong>¿Quiénes somos?</strong></h4><div id="ac-413" class="c-accordion__content">
-<p>Un grupo de jóvenes con experiencia en comunicación y medios que queremos compartir una mirada fresca y útil sobre lo que pasa en el día a día de la agenda informativa del país.</p>
-</div></div>
-<hr class="wp-block-separator is-style-wide"/>
+
+
 </div>
 
 </div>
@@ -174,12 +164,8 @@
 
 
 
-<div class="wp-block-pb-accordion-item c-accordion__item js-accordion-item no-js" data-initially-open="false" data-click-to-close="true" data-auto-close="true" data-scroll="false" data-scroll-offset="0"><h4 id="at-413" class="c-accordion__title js-accordion-controller" role="button"><strong>¿Quiénes somos?</strong></h4><div id="ac-413" class="c-accordion__content">
-<p>Un grupo de jóvenes con experiencia en comunicación y medios que queremos compartir una mirada fresca y útil sobre lo que pasa en el día a día de la agenda informativa del país.</p>
-</div></div>
-<hr class="wp-block-separator is-style-wide"/>
 <div class="col-lg-12 terminos">
-Ah, sí! Por cuestiones legales, tenemos una sección de <a href="terminos-condiciones.pdf" class="verde" target="_blank"> términos y condiciones </a>.
+Ah, sí! Por cuestiones legales, tenemos una sección de <a href="terminos-condiciones.php" class="verde" > términos y condiciones </a>.
 
 </div>
 </div>
