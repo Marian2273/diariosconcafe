@@ -1,7 +1,7 @@
 <?php include("includes/header.php"); ?>
     <!-- Slider Start -->
   
-<section class="resumen">
+<section class="conocenos">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">

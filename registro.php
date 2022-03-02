@@ -53,7 +53,7 @@
                                 </div>
                                 </div>
                             
-                                <button class="au-btn au-btn--block au-btn--green m-b-20 btn-login" type="submit">  Registrarse </button>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20 btn-login" type="submit">  Registrarme </button>
                               
                             </form>
                            <div class="col-lg-12" id="add_err"></div>

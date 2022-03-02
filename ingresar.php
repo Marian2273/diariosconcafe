@@ -26,7 +26,7 @@
                                 <div class="forgot col-md-6 ">
 						        <a href="olvido-su-clave.php"> Olvidé mi contraseña </a>
 					            </div>
-                                <div class="registro col-md-6">
+                                <div class="reg col-md-6">
 						        <a href="registro.php"> Registrarme </a>
 					            </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20 btn-login" type="submit">  Login </button>

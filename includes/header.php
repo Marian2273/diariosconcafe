@@ -45,7 +45,7 @@
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  
-
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
 
@@ -59,17 +59,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 ">
-                <div class="col-md-6 semana-de-prueba"> <a data-fancybox data-type="ajax" data-src="mail.php" href="javascript:;">
-                Semana de prueba
+                <div class="col-md-6 semana-de-prueba"> 
+                  <a data-fancybox data-type="ajax" data-src="mail.php" href="javascript:;">
+                  ¡SEMANA DE PRUEBA!
                 </a></div>
                 <div class="col-md-6 seccion-usuarios">
                 <?php if($user_kiara !=''){ ?>
-						<a href="perfil-usuario.php" class="perfil" > Perfil Usuario </a> 
-					
-						<a href="functions/logout.php" class="cerrar-sesion"> Cerrar Sesión </a>
+                  <div class="usuarios">
+						<a href="perfil-usuario.php" class="perfil" > PERFIL USUARIO </a> 
+				    <a href="functions/logout.php" class="cerrar-sesion"> CERRAR SESIÓN </a>
+                </div>
 						<?php }else{ ?>
-						<a href="ingresar.php" class="sesion"> Iniciar Sesión </a> <span> |</span>
-						<a href="registro.php" class="registro" >Registrarse</a>
+              <div class="usuarios">
+						<a href="ingresar.php" class="sesion"> LOGIN </a> <span> |</span>
+						<a href="registro.php" class="registro" >REGISTRARME</a>
+            </div>
 						<?php } ?>
 
                 </div>
