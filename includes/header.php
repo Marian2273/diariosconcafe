@@ -64,9 +64,9 @@
                   ¡SEMANA DE PRUEBA!
                 </a></div>
                 <div class="col-md-6 seccion-usuarios">
-                <?php if($user_kiara !=''){ ?>
+                <?php if($user_cafe !=''){ ?>
                   <div class="usuarios">
-						<a href="perfil-usuario.php" class="perfil" > PERFIL USUARIO </a> 
+						<a href="perfil-usuario.php" class="perfil" > PERFIL USUARIO </a> <span> |</span>
 				    <a href="functions/logout.php" class="cerrar-sesion"> CERRAR SESIÓN </a>
                 </div>
 						<?php }else{ ?>
@@ -125,11 +125,11 @@
     <div class="container">
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
     <ul class="nav navbar-nav navbar-center">
-      <li class="active"><a href="index.php">TAPAS DE HOY</a></li>
-      <li><a href="noticias-de-ayer.php">NOTICIAS DE AYER</a></li>
-      <li><a href="domingos-ilustrados.php">DOMINGOS ILUSTRADOS</a></li>
-      <li><a href="conocenos.php">CONOCENOS</a></li>
-      <li class="sus" ><a href="quiero-suscribirme.php">¡QUIERO SUSCRIBIRME!</a></li>
+      <li class="<?= $a;?>"><a href="index.php">TAPAS DE HOY</a></li>
+      <li class="<?= $b;?>"><a href="noticias-de-ayer.php">NOTICIAS DE AYER</a></li>
+      <li class="<?= $c;?>"><a href="domingos-ilustrados.php">DOMINGOS ILUSTRADOS</a></li>
+      <li class="<?= $d;?>"><a href="conocenos.php">CONOCENOS</a></li>
+      <li class="sus <?= $e;?>" ><a href="quiero-suscribirme.php">¡QUIERO SUSCRIBIRME!</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </div>

@@ -659,33 +659,33 @@ font header .navbar-default .navbar-nav li a:hover {
 /*--
 	contact-form Start 
 --*/
-#contact-form, #registro-form {
-  padding-top: 70px;
+#contact-form, #registro-form, #formulariologin, #grupal-form, #suscriptor-form {
+  padding-top: 0px;
   padding-bottom: 35px;
 }
-#contact-form .block form .form-group ,  #registro-form .block form .form-group {
+#contact-form .block form .form-group ,   #registro-form .block form .form-group ,   #formulariologin .block form .form-group, #grupal-form .block form .form-group, #suscriptor-form .block form .form-group {
   padding-bottom: 15px;
   margin: 0px;
 }
-#contact-form .block form .form-group .form-control,  #registro-form .block form .form-group .form-control {
+#contact-form .block form .form-group .form-control,  #registro-form .block form .form-group .form-control , #formulariologin .block form .form-group .form-control, #grupal-form .block form .form-group .form-control, #suscriptor-form .block form .form-group .form-control {
   background: #F6F8FA;
   height: 60px;
   border: 1px solid #EEF2F6;
   box-shadow: none;
   width: 100%;
 }
-#contact-form .block form .form-group-2 ,  #registro-form .block form .form-group-2 {
+#contact-form .block form .form-group-2 ,  #registro-form .block form .form-group-2, #formulariologin .block form .form-group-2 , #grupal-form .block form .form-group-2, #suscriptor-form .block form .form-group-2 {
   padding-bottom: 15px;
   margin: 0px;
 }
-#contact-form .block form .form-group-2 textarea ,  #registro-form .block form .form-group-2 textarea {
+#contact-form .block form .form-group-2 textarea ,  #registro-form .block form .form-group-2 textarea , #formulariologin .block form .form-group-2 textarea , #grupal-form .block form .form-group-2 textarea , #suscriptor-form .block form .form-group-2 textarea {
   background: #F6F8FA;
   height: 135px;
   border: 1px solid #EEF2F6;
   box-shadow: none;
   width: 100%;
 }
-#contact-form .block button ,  #registro-form .block button {
+#contact-form .block button ,  #registro-form .block button , #formulariologin .block button, #grupal-form .block button, #suscriptor-form .block button {
   width: 100%;
   height: 60px;
   background: #47424C;
@@ -694,13 +694,13 @@ font header .navbar-default .navbar-nav li a:hover {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-#contact-form label , #registro-form label {
+#contact-form label , #registro-form label , #formulariologin label, #grupal-form label, #suscriptor-form label {
   
   width: 100%;
   text-align: left;
   font-size: 16px;
 }
-#contact-form input ,  #registro-form input {
+#contact-form input ,  #registro-form input , #formulariologin input , #grupal-form input, #suscriptor-form input {
   border: 2px solid #10b799;
   background-color: transparent;
   width: 100%;
@@ -708,7 +708,7 @@ font header .navbar-default .navbar-nav li a:hover {
   text-align: left;
   font-size: 16px;
 }
-#contact-form select ,  #registro-form select {
+#contact-form select ,  #registro-form select, #formulariologin select , #grupal-form select, #suscriptor-form select {
   border: 2px solid #10b799;
   background-color: transparent;
   width: 100%;
@@ -922,6 +922,9 @@ font-family: 'Montserrat', sans-serif;  font-weight: 500;
 }
 .botonera .navbar-nav .sus {
   background-color: #018d7b;
+}
+.botonera .navbar-nav .active{
+  background-color:#212121;
 }
 #slider {
   position: relative;
@@ -1176,10 +1179,10 @@ footer .footer-manu ul .zoom-social_icons-list__item
 {
   float: right;
 }
-.verde{
+.verde, .link-verde{
   color:#0fe3bc;
 }
-.verde:hover{
+.link-verde:hover{
   color:#018d7b;
 }
 .listado-noticias{
@@ -1299,15 +1302,24 @@ font-weight: 600;
   margin-bottom: 50px;
  text-align: center;
  }
- #contact-form{
+ #contact-form, #formulariologin{
    width: 40%;
   margin:0px auto;
  }
- #registro-form{
+ #registro-form ,#grupal-form, #formulario-registro{
    width: 80%;
   margin:0px auto;
  }
- #contact-form .btn-login , #registro-form .btn-login{
+ #contact-form .btn-login , #registro-form .btn-login, #formulariologin .btn-login, #grupal-form .btn-login, #formulario-registro .btn-login, #suscriptor-form .btn-login,  .btn-login{
+   background-color: #10b799;
+   color:#fff;
+   border:none;
+   padding: 10px 20px;
+   font-size: 16px;
+   font-weight: 600;
+   border-radius: 10px;
+   margin-top: 20px;
+   margin-bottom: 20px;
   border: 2px solid #10b799;
  background-color:#10b799;
   padding: 10px 25px;
@@ -1336,10 +1348,27 @@ font-weight: 600;
   text-align: right;
 }
  /* registro */
-
+#exampleCheck1{
+  width: 20px!important;
+  float: left;
+}
+.form-check-label{
+  
+  width: 50%!important;
+  float: left;
+  padding-top: 20px;
+}
  .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label{
    text-align: left;
    color: #fff;
+ }
+ .termino
+ {
+width: 100%;
+float: left;
+ }
+ .form-control{
+   color:#fff;
  }
  /* Terminos y condiciones */
  .p-parrafo{
@@ -1361,3 +1390,64 @@ font-size: 18px;
 padding-top: 20px;
 padding-bottom: 20px;
  }
+.perfil {
+
+    margin-top: 40px;
+    text-align: center;
+}
+.perfil h4,
+.perfil p {
+    width: 80%;
+    padding: 0;
+
+    text-align: left;
+    margin: auto;
+}
+.editar-perfil{
+  margin-top: 20px;
+}
+.editar-perfil h4{
+ text-align: left;
+ width: 80%;
+ margin: auto;
+ margin-top: 20px;
+ 
+}
+.cada-perfil{
+ 
+  margin-top: 20px;
+}
+.cada-perfil p{
+  
+  width: 75%;
+  
+ }
+.cada-boton{
+
+  margin-top: 40px;
+}
+.botonera-izq{
+ 
+}
+.botonera-izq li{
+margin-top: 10px;
+text-align: left;
+}
+.botonera-izq li a{
+  color:#fff;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 0px;
+ 
+}
+.botonera-izq li a:hover{
+  color:#5C5C5C;
+}
+/*Agregar Suscriptor */
+.volver{
+  width: 100%;
+  
+  float: left;
+  text-align: left;
+  font-size: 16px;
+}

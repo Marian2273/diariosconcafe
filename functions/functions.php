@@ -115,8 +115,8 @@ if (!function_exists('send_notification')) {
       $mail -> Password =$pass; // Contraseña
       $mail -> Port = $port; // Puerto a utilizar
 
-      $mail -> From =   $userName; // Desde donde enviamos (Para mostrar)
-      $mail -> FromName = "Notificaciones Inés Waiss";
+      $mail -> From ="soporte@freecanelo.com.ar"; // Desde donde enviamos (Para mostrar)
+      $mail -> FromName = "Notificaciones Diarios con Café";
       $mail -> AddAddress($email); // Esta es la dirección a donde enviamos
       //$mail->AddCC("cuenta@dominio.com"); 
       // $mail->AddBCC("marianabelgrano@hotmail.com");  Copia oculta para esssaaabel
@@ -150,10 +150,79 @@ if (!function_exists('send_notification')) {
 } 
 
 
-              // Captcha
- if($filename =='registro.php' or $filename =='contacto.php' or $filename == 'ingresar.php' or $filename == 'olvido-su-clave.php' or $filename == 'cuenta.php'){
+ // Captcha
+ if($filename =='registro.php' or $filename =='agregar-suscriptor.php' or $filename =='contacto.php' or $filename == 'ingresar.php' or $filename == 'olvido-su-clave.php' or $filename == 'cuenta.php'){
 $captcha='<script src="https://www.google.com/recaptcha/api.js?render=6Le03n0eAAAAAPvJr46Tq6U9BnQpMEICuIJNy1rK"></script>';
-            }      
+            }   
+            
+            
+//Botonera Active            
+if($filename =='index.php'){
+  $a="active";
+}else if($filename =='noticias-de-ayer.php'){
+  $b="active";
+}else if($filename =='domingos-ilustrados.php'){
+  $c="active";
+}else if($filename =='conocenos.php'){
+  $d="active"; 
+}else if($filename =='quiero-suscribirme.php'){
+    $e="active";
+}
+
+/* Generales */
+if (!function_exists('get_info')) {
+  function get_info($table,$id, $name) {
+      global $mysqli;
+      $name = $name;
+      $id = $id;
+      $table =$table;
+      $query = "SELECT * FROM $table WHERE id LIKE '$id' ";
+      $result = mysqli_query($mysqli, $query);
+      while ($row = mysqli_fetch_assoc($result)) {
+
+                  if($name ==  $name){
+                  return $row[$name];
+                   }
+                               
+  }
+
+}
+}
+ // Ver suscriptores (Grupal)
+ if (!function_exists('get_sus_grupal')) {
+  function get_sus_grupal($id) {
+      global $mysqli;
+      $id=$id;
+      global $user_cafe;
+          $query="SELECT * FROM grupal WHERE id_user LIKE $id";
+          $result = mysqli_query($mysqli,$query) ;
+            $total= mysqli_num_rows( $result);
+            if($total > 0){
+               
+          while ($row = mysqli_fetch_assoc($result)) {
+            
+             echo
+             '<div class="col-md-8 col-sm-12 cada-perfil">
+             <p>Nombre Apellido: <b>'.$row['nombre'].'  '.$row['apellido'].'</b></p>
+             <p>Email: <b>'.$row['email'].'</b></p>
+             <p>Teléfono / WhastApp: <b>'.$row['telefono'].'</b></p>
+            
+             </div>
+             <div class="col-md-2 col-sm-12 cada-boton">
+             <a class="btn btn-default" href="editar-grupal.php?id='.$row['id'].'"> Editar Suscriptor </a>
+            </div>
+             ';
+
+          }
+          }else{
+            echo '
+             <p>No hay suscriptores</p>
+             <a class="btn btn-default" href="agregar-suscriptor.php"> Agregar Suscriptor </a>
+            ';
+            }
+  }
+}
+
 /*
 // Get Admin Info
 if (!function_exists('get_admin')) {

@@ -2,8 +2,8 @@
 
 include("../config/connect1.php"); 
 require ("functions.php");
-
 /*
+
 echo '<pre>';
 print_r($_POST);
 echo '</pre>';
@@ -12,13 +12,11 @@ die();
 $nombre=addslashes($antiXss->xss_clean($_POST['nombre']));
 $apellido=addslashes($antiXss->xss_clean($_POST['apellido']));
 $email=addslashes($antiXss->xss_clean($_POST['email']));
-$password=addslashes($antiXss->xss_clean($_POST['password']));
+$id_user=addslashes($antiXss->xss_clean($_POST['id_user']));
 $id_update=addslashes($antiXss->xss_clean($_POST['id_update']));
-$password1=addslashes($antiXss->xss_clean($_POST['password1']));
-$niveles=addslashes($antiXss->xss_clean($_POST['niveles']));
-$terminos=addslashes($antiXss->xss_clean($_POST['terminos']));
-$telefono=addslashes($antiXss->xss_clean($_POST['telefono']));
 
+$telefono=addslashes($antiXss->xss_clean($_POST['telefono']));
+$nombre_padre= get_user_info($id_user, nombre).' , '.get_user_info($id_user, apellido);
 
 if($id_update == 1){
 if($password1 == ''){
@@ -56,15 +54,13 @@ $curlResponse = curl_exec($ch);
 $captchaResponse = json_decode($curlResponse, true);
 
 // Users repeat 
-$sql_all="SELECT email FROM usuarios WHERE email LIKE '$email' ";
+$sql_all="SELECT email FROM grupal WHERE email LIKE '$email' ";
 $result_all = mysqli_query($mysqli,$sql_all);
 $total_all= mysqli_num_rows($result_all);
 if($total_all > 0){
 echo 'Este email ya se encuentra registrado en nuestra base de datos';
 }
-else if($terminos == ''){
-    echo 'Por favor lee y acepta los términos y condiciones';
-}
+
 else if($captchaResponse['success'] == '1' 
 	&& $captchaResponse['action'] == $action 
 	&& $captchaResponse['score'] >= 0.5 
@@ -75,16 +71,15 @@ else if($captchaResponse['success'] == '1'
                 $sec_code = substr(md5(rand()), 0, 20);
                 $options = array("cost"=>4);
                 $hashPassword = password_hash($password,PASSWORD_BCRYPT,$options);  
-                $sql="INSERT INTO usuarios (nombre, apellido, email, password ,id_activo, sec_code, id_nivel, telefono)
+                $sql="INSERT INTO grupal (nombre, apellido, email ,telefono ,id_user,  id_activo, id_orden )
                 VALUES (
                 '$nombre' ,
                 '$apellido',
                 '$email',
-                '$hashPassword',
+                '$telefono',
+                '$id_user',
                 '1',
-                '$sec_code',
-                '$niveles',
-                '$telefono'
+                '1'
                 
                 )";
                 mysqli_query($mysqli,$sql);
@@ -140,8 +135,10 @@ else if($captchaResponse['success'] == '1'
                        'LNAME' => $apellido,
                        'PHONE' => $telefono,
                    ],
+                   
+                   
                    "interests" => array(
-                     $nivel => true
+                                'ba3e1ca403' => true
                  )
                    
                   
@@ -160,8 +157,8 @@ else if($captchaResponse['success'] == '1'
                 curl_close($ch1);
              
                 if (200 == $status_code) {
-                  // echo "Su registro se realizó con éxito.";
-                   send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url);
+                    echo "true";
+                   //send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url);
                 }else{
                     echo "Se produjo un error al realizar el registro, por favor intentar más tarde.";
                 }

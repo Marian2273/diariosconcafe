@@ -8,7 +8,7 @@
             <img src="img/cafecito.png" alt="diarios con café">
             <h4 class="verde">Iniciar Sesión</h4>
             <div class="login-form">
-                            <form method="post" id="contact-form" role="form" autocomplete="off" enctype="multipart/form-data">
+                            <form method="post" id="formulariologin" role="form" autocomplete="off" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>Usuario</label>
                                     <div class="form-group has-success"> 
