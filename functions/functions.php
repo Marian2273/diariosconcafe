@@ -85,7 +85,7 @@ if (!function_exists('get_user_info')) {
 }
 //Send Notification
 if (!function_exists('send_notification')) {
-  function send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url) {
+  function send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url1) {
       global $mysqli;
 
       $id_user= $id_user;
@@ -97,7 +97,7 @@ if (!function_exists('send_notification')) {
       $userName = $userName;
       $pass= $pass;
       $port = $port;
-      $url = $url;
+      $url1 = $url1;
       //Users
       $name =get_user_info($id_user, 'nombre');
       $lastname =get_user_info($id_user, 'apellido');
@@ -128,7 +128,7 @@ if (!function_exists('send_notification')) {
       $body = file_get_contents($mail_tem);
       //$body = preg_replace("[\]",'',$body); setup vars to replace
       $vars = array('{id_user}', '{name}', '{sec_code}', '{email}', '{url}');
-      $values = array($id_user, $name.' '.$lastname, $sec_code, $email, $url);
+      $values = array($id_user, $name.' '.$lastname, $sec_code, $email, $url1);
 
    //replace vars
       $body = str_replace($vars,$values,$body);
@@ -151,7 +151,7 @@ if (!function_exists('send_notification')) {
 
 
  // Captcha
- if($filename =='registro.php' or $filename =='agregar-suscriptor.php' or $filename =='contacto.php' or $filename == 'ingresar.php' or $filename == 'olvido-su-clave.php' or $filename == 'cuenta.php'){
+ if($filename =='registro.php' or $filename =='agregar-suscriptor.php' or $filename =='contacto.php' or $filename == 'ingresar.php' or $filename == 'olvido-su-clave.php' or $filename == 'editar-perfil.php' or $filename == 'editar-grupal.php'){
 $captcha='<script src="https://www.google.com/recaptcha/api.js?render=6Le03n0eAAAAAPvJr46Tq6U9BnQpMEICuIJNy1rK"></script>';
             }   
             
@@ -196,11 +196,15 @@ if (!function_exists('get_info')) {
       global $user_cafe;
           $query="SELECT * FROM grupal WHERE id_user LIKE $id";
           $result = mysqli_query($mysqli,$query) ;
-            $total= mysqli_num_rows( $result);
+          $total= mysqli_num_rows( $result);
             if($total > 0){
                
           while ($row = mysqli_fetch_assoc($result)) {
-            
+            if($row['nombre']== ''){
+              $boton=' <a class="btn  btn-verde-s" href="agregar-suscriptor.php?id='.$row['id'].'"> Agregar Suscriptor </a>';
+            } else if($row['nombre'] != ''){
+              $boton=' <a class="btn  btn-verde-s" href="editar-grupal.php?id='.$row['id'].'"> Editar Suscriptor </a>';
+            }
              echo
              '<div class="col-md-8 col-sm-12 cada-perfil">
              <p>Nombre Apellido: <b>'.$row['nombre'].'  '.$row['apellido'].'</b></p>
@@ -209,7 +213,7 @@ if (!function_exists('get_info')) {
             
              </div>
              <div class="col-md-2 col-sm-12 cada-boton">
-             <a class="btn btn-default" href="editar-grupal.php?id='.$row['id'].'"> Editar Suscriptor </a>
+             '.$boton.'
             </div>
              ';
 
@@ -217,7 +221,7 @@ if (!function_exists('get_info')) {
           }else{
             echo '
              <p>No hay suscriptores</p>
-             <a class="btn btn-default" href="agregar-suscriptor.php"> Agregar Suscriptor </a>
+             <a class="btn btn-verde-s" href="agregar-suscriptor.php"> Agregar Suscriptor </a>
             ';
             }
   }

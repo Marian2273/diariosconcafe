@@ -2,8 +2,8 @@
 
 include("../config/connect1.php"); 
 require ("functions.php");
-/*
 
+/*
 echo '<pre>';
 print_r($_POST);
 echo '</pre>';
@@ -16,21 +16,48 @@ $id_user=addslashes($antiXss->xss_clean($_POST['id_user']));
 $id_update=addslashes($antiXss->xss_clean($_POST['id_update']));
 
 $telefono=addslashes($antiXss->xss_clean($_POST['telefono']));
-$nombre_padre= get_user_info($id_user, nombre).' , '.get_user_info($id_user, apellido);
+$nombre_padre= get_user_info($user_cafe, nombre).' , '.get_user_info($user_cafe, apellido);
+
+
+$id=addslashes($antiXss->xss_clean($_POST['id']));
+
+
 
 if($id_update == 1){
-if($password1 == ''){
-    $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido' WHERE id LIKE '$user_inesw' ";
+    $id_orden= get_info(grupal,$id, id_orden );
+    $sql="UPDATE grupal SET nombre = '$nombre', apellido='$apellido', email ='$email', telefono='$telefono'  WHERE id LIKE '$id' ";
     mysqli_query($mysqli,$sql);
+        $name= $nombre.' ('.$nombre_padre.'('.$id_orden.'))';
+        $status = 'subscribed'; // "subscribed" or "unsubscribed" or "cleaned" or "pending"
+        $list_id = $config['list_id'];
+        $api_key = $config['api_key'];
+        $merge_fields = array('FNAME' => $name,'LNAME' => $apellido, 'PHONE' => $telefono);
+    function rudr_mailchimp_subscriber_status( $email, $status, $list_id, $api_key, $merge_fields = array('FNAME' => '','LNAME' => '') ){
+        $data = array(
+            'apikey'        => $api_key,
+            'email_address' => $email,
+            'status'        => $status,
+            'merge_fields'  => $merge_fields
+        );
+        $mch_api = curl_init(); // initialize cURL connection
+     
+        curl_setopt($mch_api, CURLOPT_URL, 'https://' . substr($api_key,strpos($api_key,'-')+1) . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/' . md5(strtolower($data['email_address'])));
+        curl_setopt($mch_api, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Authorization: Basic '.base64_encode( 'user:'.$api_key )));
+        curl_setopt($mch_api, CURLOPT_USERAGENT, 'PHP-MCAPI/2.0');
+        curl_setopt($mch_api, CURLOPT_RETURNTRANSFER, true); // return the API response
+        curl_setopt($mch_api, CURLOPT_CUSTOMREQUEST, 'PUT'); // method PUT
+        curl_setopt($mch_api, CURLOPT_TIMEOUT, 10);
+        curl_setopt($mch_api, CURLOPT_POST, true);
+        curl_setopt($mch_api, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($mch_api, CURLOPT_POSTFIELDS, json_encode($data) ); // send data in json
+     
+        $result = curl_exec($mch_api);
+        return $result;
+    }
+
+    rudr_mailchimp_subscriber_status($email, $status, $list_id, $api_key, $merge_fields );
     echo 'true';
-}else{
-    $sec_code = substr(md5(rand()), 0, 20);
-    $options = array("cost"=>4);
-    $hashPassword = password_hash($password1,PASSWORD_BCRYPT,$options);  
-    $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido', password = '$hashPassword' WHERE id LIKE '$user_inesw' ";
-    mysqli_query($mysqli,$sql);
-    echo 'true';
-}
+
 
 
 }else{  
@@ -61,28 +88,12 @@ if($total_all > 0){
 echo 'Este email ya se encuentra registrado en nuestra base de datos';
 }
 
-else if($captchaResponse['success'] == '1' 
-	&& $captchaResponse['action'] == $action 
-	&& $captchaResponse['score'] >= 0.5 
-	&& $captchaResponse['hostname'] ==  $_SERVER['SERVER_NAME'])
-{
-
-
-                $sec_code = substr(md5(rand()), 0, 20);
-                $options = array("cost"=>4);
-                $hashPassword = password_hash($password,PASSWORD_BCRYPT,$options);  
-                $sql="INSERT INTO grupal (nombre, apellido, email ,telefono ,id_user,  id_activo, id_orden )
-                VALUES (
-                '$nombre' ,
-                '$apellido',
-                '$email',
-                '$telefono',
-                '$id_user',
-                '1',
-                '1'
-                
-                )";
+else { 
+             
+                $sql="UPDATE grupal SET nombre = '$nombre', apellido='$apellido', email ='$email', telefono='$telefono'  WHERE id LIKE '$id' ";
                 mysqli_query($mysqli,$sql);
+             
+              
                 
                 
 
@@ -105,44 +116,54 @@ else if($captchaResponse['success'] == '1'
                 $api_key = $config['api_key'];
 
 
-                //Niveles Maichip 
-                $expreso='c6b98acc71';
-                $cortado ='13fcb2e4e4';
-                $conleche='87d8b25b59';
-                $grupal='ba3e1ca403';
-
-                if($niveles == 7){
-                $nivel = $expreso;
-                }if($niveles == 8){
-                    $nivel = $cortado;
-                }if($niveles == 9){
-                    $nivel = $conleche;
-                }if($niveles == 10){
-                    $nivel = $grupal;
-                }
+            
+                //Niveles Maichip - Diarios con café (grupo)
+                $prueba ='08b5c2f6d2';
+                $expreso= '8a85574d77';
+                $cortado= '0bab9f4f12';
+                $conleche= '423b844cc4';
+                $grupal= 'ac597b75d5';
                 
-               
+                //Niveles Mailchimp - Diarios con café (grupo)
+             /*   $prueba ='41d563069f';
+                $expreso= 'c0aca2bf8d';
+                $cortado= 'fea9f0c16e';
+                $conleche= '9b10784e3c';
+                $grupal= 'bbadd6e72d';*/
+
+                
+                
+             
                $data_center = substr($api_key,strpos($api_key,'-')+1);
  
                $url = 'https://'. $data_center .'.api.mailchimp.com/3.0/lists/'. $list_id .'/members';
-                
+               
+                $sql_1="SELECT id_orden FROM grupal WHERE id LIKE '$id' ";
+                $result_all = mysqli_query($mysqli,$sql_1);
+                 while($row = mysqli_fetch_array($result_all)){
+                    $id_orden = $row['id_orden'];
+                    }
+               $name= $nombre.' ('.$nombre_padre.'('.$id_orden.'))';
                $json = json_encode([
                    'email_address' => $email,
                    'status'        => 'subscribed', //pass 'subscribed' or 'pending'
                    
                    'merge_fields'  => [
-                       'FNAME' => $nombre,
+                       'FNAME' => $name,
                        'LNAME' => $apellido,
                        'PHONE' => $telefono,
+                     
+                      
                    ],
                    
                    
                    "interests" => array(
-                                'ba3e1ca403' => true
+                        'ac597b75d5' => true
                  )
                    
                   
                ]);
+               
                try {
                 $ch1 = curl_init($url);
                 curl_setopt($ch1, CURLOPT_USERPWD, 'user:'. $api_key);
@@ -167,10 +188,7 @@ else if($captchaResponse['success'] == '1'
                     }
 
                 }
-    else {
-     echo '<p> You are a Spammer! Refresh the page and try again </p>';
-     
-}
+   
 
 
 }

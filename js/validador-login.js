@@ -93,7 +93,7 @@ $('document').ready(function () {
     });
 
 
-    $("#olvido").validate({
+    $("#formulario-olvido").validate({
 
         rules: {
 
@@ -132,7 +132,7 @@ $('document').ready(function () {
         },
         submitHandler: function (form) {
             grecaptcha.ready(function () {
-                grecaptcha.execute('6LcI2PgaAAAAALUgDIZSl1r4QiNmD2CuZsWV0KqE',{action: 'application_form'}).then(function(token){
+                grecaptcha.execute('6Le03n0eAAAAAPvJr46Tq6U9BnQpMEICuIJNy1rK',{action: 'application_form'}).then(function(token){
 
                         // var formData = $(form).serialize();
                         let formData = {

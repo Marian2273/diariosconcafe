@@ -280,7 +280,7 @@ $("#registro-form").validate({
                                                                              success: function (html) {
                                                                                  if (html == 'true') {
                                                                                      Swal.fire({icon: 'success', 
-                                                                                     title: '<span style="font-size:16px;"> Su Registro se realizó con éxito <br> Muchas Gracias! </span>', 
+                                                                                     title: '<span style="font-size:16px;"> El suscriptor se agregó exitosamente. </span>', 
                                                                                      showConfirmButton: true, 
                                                                                      confirmButtonColor: '#27ce4b', 
                                                                                       }).then(function(){ 

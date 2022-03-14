@@ -1,7 +1,7 @@
 
 <?php include("includes/header.php"); ?>
     <!-- Slider Start -->
-  
+  <?php if($user_cafe != ''){ ?>  
 <section class="resumen">
     <div class="container">
         <div class="row">
@@ -44,11 +44,18 @@
                                     <span id="error" class="help-block"></span>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label>Teléfono / WhatsApp</label>
+                                    <div class="form-group has-success"> 
+                                    <input class="au-input au-input--full form-control" type="text" id="telefono" name="telefono" placeholder="Teléfono / WhatsApp" value="<?php echo get_user_info($user_cafe, telefono); ?>" >
+                                    <span id="error" class="help-block"></span>
+                                    </div>
+                                </div>
                                 <div class="form-group has-success"> 
                                 <label>Tipo de suscripción</label>
-                                                    <select class="form-control  custom-select custom-select-lg " name="niveles" id="niveles">
-                                                    <option  value=""> Sleccionar tipo de suscripción </option>
-                                                            <?php get_level(); ?> 
+                                                    <select class="form-control  custom-select custom-select-lg " name="niveles1" id="niveles" readonly>
+                                                    <option  value="">  <?php echo get_info(niveles,get_user_info($user_cafe, id_nivel), name); ?>  </option>
+                                                          
                                                              
                                                     </select>
                                                     <span id="error" class="help-block"></span>
@@ -56,15 +63,17 @@
                                 <div class="form-group">
                                     <label>Clave</label>
                                     <div class="form-group has-success"> 
-                                    <input class="au-input au-input--full form-control" type="password" id="password" name="password" placeholder="********">
+                                    <input class="au-input au-input--full form-control" type="password" id="password1" name="password1" placeholder="********">
                                     <span id="error" class="help-block"></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Repetir Clave</label>
                                     <div class="form-group has-success"> 
-                                    <input class="au-input au-input--full form-control" type="password" id="cpassword" name="cpassword"  placeholder="********">
+                                    <input class="au-input au-input--full form-control" type="password" id="cpassword1" name="cpassword1"  placeholder="********">
                                     <span id="error" class="help-block"></span>
                                 </div>
+                               
+                                <input type="hidden" name="id_update" value="1">
                                 </div>
                             
                                 <button class="au-btn au-btn--block au-btn--green m-b-20 btn-login" type="submit">  Editar Perfil </button>
@@ -79,6 +88,23 @@
     <hr class="wp-block-separator is-style-wide"/>
     </div>
 </section>
+<?php } else{ ?>  
+<section class="resumen">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <img src="img/cafecito.png" alt="diarios con café">
+                    <h4 class="verde">EDITAR PERFIL DEL USUARIO</h4>
+                    <hr>
+                    Debes estar logueado para acceder a esta sección.
+                    <a href="ingresar.php" class="link-verde"> Iniciar Sesión </a>
+            </div>
+        </div>
+    </div>
+</section>
 
+    
+    
+    <?php }   ?>
 
 <?php include("includes/footer.php"); ?>

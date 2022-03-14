@@ -27,6 +27,7 @@
                             </li>
 
                             <li class="zoom-social_icons-list__item">
+                         
                                 <a
                                     class="zoom-social_icons-list__link"
                                     href="https://open.spotify.com/show/0aqw9KfDci72oVR5VVFexA"

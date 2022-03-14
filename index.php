@@ -60,7 +60,7 @@
 
                     </p>
                     <div class="col-md-12">
-                        <a href="ver-suscripciones.php" class="btn btn-info btn-verde ">
+                        <a href="quiero-suscribirme.php" class="btn btn-info btn-verde ">
                             VER SUSCRIPCIONES
                         </a>
                     </div>
@@ -102,7 +102,7 @@
                 <h6>Resumen y audio por WhatsApp</h6>
                 <p>Cada mañana te llega nuestro análisis de las noticias más relevantes con claves de lectura.
                 </p>
-                <a href="ver-suscripciones.php" class="btn btn-info btn-verde-sus ">
+                <a href="ver-suscripciones-expreso.php" class="btn btn-info btn-verde-sus ">
                     AR$ 400 / €3
                 </a>
             </div>
@@ -116,7 +116,7 @@
             <p>Con el informe diario, recibís en tu casilla todos los links directos a los artículos de los medios relevados.
 
           </p>
-            <a href="ver-suscripciones.php" class="btn btn-info btn-verde-sus ">
+            <a href="ver-suscripciones-cortado.php" class="btn btn-info btn-verde-sus ">
                 AR$ 700 / €5  
             </a>
           </div>
@@ -129,7 +129,7 @@
                   <p>El análisis y los links a tu correo y el informe al WhatsApp, para que cada día elijas cómo informarte.
                     
                 </p>
-                  <a href="ver-suscripciones.php" class="btn btn-info btn-verde-sus ">
+                  <a href="ver-suscripciones-con-leche.php" class="btn btn-info btn-verde-sus ">
                       AR$ 750 / €6  
                   </a>
                   </div>
@@ -155,7 +155,7 @@
              <h4>Suscripción Grupal</h4>
              <p><strong>¡Para todas y todos! </strong>Si tenés un grupo de trabajo, familiar, de amistades, de deporte... lo que sea. Te ofrecemos un ofertón de <strong>cinco suscripciones con doble envío  </strong>para que la experiencia Diarios con Café se siga expandiendo.
 </p>
-             <a href="ver-suscripciones.php" class="btn btn-info btn-verde-grupo ">
+             <a href="ver-suscripciones-grupal.php" class="btn btn-info btn-verde-grupo ">
               AR$ 2000 / €15  
           </a>
                   
@@ -175,7 +175,11 @@
             <div class="col-md-12 col-sm-12">
               <h4>¿CÓMO CANCELAR TU SUSCRIPCIÓN?</h4>
               <hr>
-              <p class="center">La hacemos fácil. Cuando no quieras recibir más Diarios con café simplemente podés cancelar tu suscripción <a rel="noreferrer noopener" class="verde" href="https://diariosconcafe.us1.list-manage.com/unsubscribe?u=50d1b98d85b86ac4d7edaaade&amp;id=0a761cd642" target="_blank">aquí</a></a></p>
+              <p class="center">La hacemos fácil. Cuando no quieras recibir más Diarios con café simplemente podés cancelar tu suscripción 
+              <a data-fancybox data-type="ajax" class="verde" data-src="formularios/darse-de-baja.php" href="javascript:;">
+	aquí
+</a>
+              </p>
            </div>
           </div>
       </section>

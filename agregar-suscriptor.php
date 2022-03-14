@@ -1,6 +1,6 @@
 <?php include("includes/header.php"); ?>
     <!-- Slider Start -->
-  
+    <?php if($user_cafe != ''){ ?>  
 <section class="resumen">
     <div class="container">
         <div class="row">
@@ -50,6 +50,7 @@
                              
                                 </div>
                                 <input type="hidden" name="id_user" value="<?php echo $user_cafe; ?>">
+                                <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
                                 <button class="au-btn au-btn--block au-btn--green m-b-20 btn-login" type="submit">  Agregar suscriptor </button>
                               
                             </form>
@@ -62,5 +63,25 @@
 
 </section>
 
+
+
+<?php } else{ ?>  
+<section class="resumen">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <img src="img/cafecito.png" alt="diarios con café">
+                    <h4 class="verde">EDITAR PERFIL DEL USUARIO</h4>
+                    <hr>
+                    Debes estar logueado para acceder a esta sección.
+                    <a href="ingresar.php" class="link-verde"> Iniciar Sesión </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+    <?php }   ?>
 
 <?php include("includes/footer.php"); ?>

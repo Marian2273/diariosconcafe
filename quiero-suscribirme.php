@@ -42,7 +42,7 @@
                   <p>El análisis y los links a tu correo y el informe al WhatsApp, para que cada día elijas cómo informarte.
                     
                 </p>
-                  <a href="ver-suscripciones-con´leche.php" class="btn btn-info btn-verde-sus ">
+                  <a href="ver-suscripciones-con-leche.php" class="btn btn-info btn-verde-sus ">
                       AR$ 750 / €6  
                   </a>
                   </div>

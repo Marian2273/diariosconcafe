@@ -22,14 +22,14 @@ $telefono=addslashes($antiXss->xss_clean($_POST['telefono']));
 
 if($id_update == 1){
 if($password1 == ''){
-    $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido' WHERE id LIKE '$user_inesw' ";
+    $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido', telefono ='$telefono'  WHERE id LIKE '$user_cafe' ";
     mysqli_query($mysqli,$sql);
     echo 'true';
 }else{
     $sec_code = substr(md5(rand()), 0, 20);
     $options = array("cost"=>4);
     $hashPassword = password_hash($password1,PASSWORD_BCRYPT,$options);  
-    $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido', password = '$hashPassword' WHERE id LIKE '$user_inesw' ";
+    $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido', password = '$hashPassword' , telefono ='$telefono' WHERE id LIKE '$user_cafe' ";
     mysqli_query($mysqli,$sql);
     echo 'true';
 }
@@ -95,6 +95,8 @@ else if($captchaResponse['success'] == '1'
                 //send Mail Validate
                 $id_user = $mysqli->insert_id;
               
+                    
+                
                            
                 $mail_tem ='mails/email-confirmation.html';
                 $sec_code = get_user_info($id_user, 'sec_code');
@@ -103,19 +105,34 @@ else if($captchaResponse['success'] == '1'
                 $userName =$config['user'];
                 $pass =$config['pass'];
                 $port=$config['port'];
-                $url=$config['url'];
+                $url1=$config['url'];
             
                 //Credenciales Maichip
                 $list_id = $config['list_id'];
                 $api_key = $config['api_key'];
 
 
-                //Niveles Maichip 
-                $expreso='c6b98acc71';
+                //Niveles Maichip Suscripciones (grupo)
+               /* $expreso='c6b98acc71';
                 $cortado ='13fcb2e4e4';
                 $conleche='87d8b25b59';
-                $grupal='ba3e1ca403';
+                $grupal='ba3e1ca403';*/
 
+                //Niveles Maichip - Diarios con café (grupo)
+                $prueba ='08b5c2f6d2';
+                $expreso= '8a85574d77';
+                $cortado= '0bab9f4f12';
+                $conleche= '423b844cc4';
+                $grupal= 'ac597b75d5';
+                
+                //Niveles Mailchimp - Diarios con café (grupo)
+             /*   $prueba ='41d563069f';
+                $expreso= 'c0aca2bf8d';
+                $cortado= 'fea9f0c16e';
+                $conleche= '9b10784e3c';
+                $grupal= 'bbadd6e72d';*/
+
+                // Esto refiere a la base de datos ( mirar siempre el ID)
                 if($niveles == 7){
                 $nivel = $expreso;
                 }if($niveles == 8){
@@ -124,6 +141,19 @@ else if($captchaResponse['success'] == '1'
                     $nivel = $conleche;
                 }if($niveles == 10){
                     $nivel = $grupal;
+                     //Suscripciones Maichip a los grupos
+                   
+                        for($i=1;$i<=5;$i++){
+                            $sql_maichip="INSERT INTO grupal (id_user, id_activo, id_orden)
+                            VALUES (
+                            '$id_user',
+                             1,
+                            '$i'
+                            )";
+                            mysqli_query($mysqli,$sql_maichip);
+                        }
+                    
+
                 }
                 
                
@@ -161,7 +191,7 @@ else if($captchaResponse['success'] == '1'
              
                 if (200 == $status_code) {
                   // echo "Su registro se realizó con éxito.";
-                   send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url);
+                   send_notification($id_user, $mail_tem, $sec_code, $subject, $smtp, $userName,$pass, $port, $url1);
                 }else{
                     echo "Se produjo un error al realizar el registro, por favor intentar más tarde.";
                 }

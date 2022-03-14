@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-md-12 ">
                 <div class="col-md-6 semana-de-prueba"> 
-                  <a data-fancybox data-type="ajax" data-src="mail.php" href="javascript:;">
+                  <a data-fancybox data-type="ajax" data-src="formularios/semana-de-prueba.php" href="javascript:;">
                   ¡SEMANA DE PRUEBA!
                 </a></div>
                 <div class="col-md-6 seccion-usuarios">

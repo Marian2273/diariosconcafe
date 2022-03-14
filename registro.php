@@ -68,7 +68,9 @@
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1" value="1" name="terminos" >
                                   
                                     <span id="error" class="help-block termino"></span>
+                                    
                                 </div>
+                                <a href="terminos-condiciones.php" class="link-verde col-lg-12 terminos" target="_blank">Ver términos y condiciones</a>
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20 btn-login" type="submit">  Registrarme </button>
                               
@@ -76,9 +78,9 @@
                            <div class="col-lg-12" id="add_err"></div>
                         </div>
           </div>
-
+          <hr>
     </div>
-    <hr class="wp-block-separator is-style-wide"/>
+    
 
 </section>
 

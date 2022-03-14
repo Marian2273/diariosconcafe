@@ -108,7 +108,7 @@ font header .navbar-default .navbar-nav li a:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  height: 600px;
+  height: 421px;
 
  
 }
@@ -659,33 +659,33 @@ font header .navbar-default .navbar-nav li a:hover {
 /*--
 	contact-form Start 
 --*/
-#contact-form, #registro-form, #formulariologin, #grupal-form, #suscriptor-form {
+#contact-form, #registro-form, #formulariologin, #grupal-form, #suscriptor-form, #formulario-olvido {
   padding-top: 0px;
   padding-bottom: 35px;
 }
-#contact-form .block form .form-group ,   #registro-form .block form .form-group ,   #formulariologin .block form .form-group, #grupal-form .block form .form-group, #suscriptor-form .block form .form-group {
+#contact-form .block form .form-group ,   #registro-form .block form .form-group ,   #formulariologin .block form .form-group, #grupal-form .block form .form-group, #suscriptor-form .block form .form-group , #formulario-olvido .block form .form-group {
   padding-bottom: 15px;
   margin: 0px;
 }
-#contact-form .block form .form-group .form-control,  #registro-form .block form .form-group .form-control , #formulariologin .block form .form-group .form-control, #grupal-form .block form .form-group .form-control, #suscriptor-form .block form .form-group .form-control {
+#contact-form .block form .form-group .form-control,  #registro-form .block form .form-group .form-control , #formulariologin .block form .form-group .form-control, #grupal-form .block form .form-group .form-control, #suscriptor-form .block form .form-group .form-control , #formulario-olvido .block form .form-group .form-control {
   background: #F6F8FA;
   height: 60px;
   border: 1px solid #EEF2F6;
   box-shadow: none;
   width: 100%;
 }
-#contact-form .block form .form-group-2 ,  #registro-form .block form .form-group-2, #formulariologin .block form .form-group-2 , #grupal-form .block form .form-group-2, #suscriptor-form .block form .form-group-2 {
+#contact-form .block form .form-group-2 ,  #registro-form .block form .form-group-2, #formulariologin .block form .form-group-2 , #grupal-form .block form .form-group-2, #suscriptor-form .block form .form-group-2, #formulario-olvido .block form .form-group-2 {
   padding-bottom: 15px;
   margin: 0px;
 }
-#contact-form .block form .form-group-2 textarea ,  #registro-form .block form .form-group-2 textarea , #formulariologin .block form .form-group-2 textarea , #grupal-form .block form .form-group-2 textarea , #suscriptor-form .block form .form-group-2 textarea {
+#contact-form .block form .form-group-2 textarea ,  #registro-form .block form .form-group-2 textarea , #formulariologin .block form .form-group-2 textarea , #grupal-form .block form .form-group-2 textarea , #suscriptor-form .block form .form-group-2 textarea, #formulario-olvido .block form .form-group-2 textarea {
   background: #F6F8FA;
   height: 135px;
   border: 1px solid #EEF2F6;
   box-shadow: none;
   width: 100%;
 }
-#contact-form .block button ,  #registro-form .block button , #formulariologin .block button, #grupal-form .block button, #suscriptor-form .block button {
+#contact-form .block button ,  #registro-form .block button , #formulariologin .block button, #grupal-form .block button, #suscriptor-form .block button, #formulario-olvido .block button {
   width: 100%;
   height: 60px;
   background: #47424C;
@@ -694,13 +694,13 @@ font header .navbar-default .navbar-nav li a:hover {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-#contact-form label , #registro-form label , #formulariologin label, #grupal-form label, #suscriptor-form label {
+#contact-form label , #registro-form label , #formulariologin label, #grupal-form label, #suscriptor-form label, #formulario-olvido label {
   
   width: 100%;
   text-align: left;
   font-size: 16px;
 }
-#contact-form input ,  #registro-form input , #formulariologin input , #grupal-form input, #suscriptor-form input {
+#contact-form input ,  #registro-form input , #formulariologin input , #grupal-form input, #suscriptor-form input, #formulario-olvido input {
   border: 2px solid #10b799;
   background-color: transparent;
   width: 100%;
@@ -708,7 +708,7 @@ font header .navbar-default .navbar-nav li a:hover {
   text-align: left;
   font-size: 16px;
 }
-#contact-form select ,  #registro-form select, #formulariologin select , #grupal-form select, #suscriptor-form select {
+#contact-form select ,  #registro-form select, #formulariologin select , #grupal-form select, #suscriptor-form select, #formulario-olvido select {
   border: 2px solid #10b799;
   background-color: transparent;
   width: 100%;
@@ -1202,6 +1202,10 @@ footer .footer-manu ul .zoom-social_icons-list__item
 .campaign a{
   color:#10b799;
 }
+.listado-noticias .campaign{
+  float:left;
+  width: 29%;
+}
 /* Sección Conocenos */
 #accordion{
  
@@ -1302,7 +1306,7 @@ font-weight: 600;
   margin-bottom: 50px;
  text-align: center;
  }
- #contact-form, #formulariologin{
+ #contact-form, #formulariologin, #formulario-olvido{
    width: 40%;
   margin:0px auto;
  }
@@ -1310,7 +1314,7 @@ font-weight: 600;
    width: 80%;
   margin:0px auto;
  }
- #contact-form .btn-login , #registro-form .btn-login, #formulariologin .btn-login, #grupal-form .btn-login, #formulario-registro .btn-login, #suscriptor-form .btn-login,  .btn-login{
+ #contact-form .btn-login , #registro-form .btn-login, #formulariologin .btn-login, #grupal-form .btn-login, #formulario-registro .btn-login, #suscriptor-form .btn-login,  .btn-login, #formulario-olvido .btn-login{
    background-color: #10b799;
    color:#fff;
    border:none;
@@ -1450,4 +1454,26 @@ text-align: left;
   float: left;
   text-align: left;
   font-size: 16px;
+}
+
+
+.btn-verde-s{
+  border: 2px solid #10b799;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+
+  border-radius: 10px;
+  color:#10b799;
+  font-weight: 500;
+}
+.btn-verde-s:hover{
+  border: 2px solid #10b799;
+  background-color: #10b799;
+  padding: 10px;
+  font-size: 16px;
+
+  border-radius: 10px;
+  color:#fff;
+  font-weight: 500;
 }
