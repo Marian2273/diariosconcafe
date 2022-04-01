@@ -155,13 +155,23 @@ $("#registro-form").validate({
                                                                         Swal.fire({icon: 'success', 
                                                                         title: '<span style="font-size:16px;"> Su Registro se realizó con éxito <br> Muchas Gracias! </span>', 
                                                                         showConfirmButton: true, 
-                                                                        confirmButtonColor: '#27ce4b', 
+                                                                        confirmButtonColor: '#15b29f', 
                                                                          }).then(function(){ 
-                                                                        location.reload();
+                                                                            window.location = "ingresar.php";
                                                                         });
                                                                        
                                                                        
-                                                                    }  else {
+                                                                    }  else if(html == 'update'){
+                                                                        Swal.fire({icon: 'success', 
+                                                                        title: '<span style="font-size:16px;"> Su Registro se realizó con éxito <br> Muchas Gracias! </span>', 
+                                                                        showConfirmButton: true, 
+                                                                        confirmButtonColor: '#15b29f', 
+                                                                         }).then(function(){ 
+                                                                            window.location = "perfil-usuario.php";
+                                                                        });
+                                                                    }
+
+                                                                     else {
                                                                         $("#add_err").html(html);
                                     
                                                                     }
@@ -282,9 +292,9 @@ $("#registro-form").validate({
                                                                                      Swal.fire({icon: 'success', 
                                                                                      title: '<span style="font-size:16px;"> El suscriptor se agregó exitosamente. </span>', 
                                                                                      showConfirmButton: true, 
-                                                                                     confirmButtonColor: '#27ce4b', 
+                                                                                     confirmButtonColor: '#15b29f', 
                                                                                       }).then(function(){ 
-                                                                                     location.reload();
+                                                                                        window.location = "perfil-usuario.php";
                                                                                      });
                                                                                     
                                                                                     

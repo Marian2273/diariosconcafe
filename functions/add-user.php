@@ -24,14 +24,14 @@ if($id_update == 1){
 if($password1 == ''){
     $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido', telefono ='$telefono'  WHERE id LIKE '$user_cafe' ";
     mysqli_query($mysqli,$sql);
-    echo 'true';
+    echo 'update';
 }else{
     $sec_code = substr(md5(rand()), 0, 20);
     $options = array("cost"=>4);
     $hashPassword = password_hash($password1,PASSWORD_BCRYPT,$options);  
     $sql="UPDATE usuarios SET nombre = '$nombre', apellido='$apellido', password = '$hashPassword' , telefono ='$telefono' WHERE id LIKE '$user_cafe' ";
     mysqli_query($mysqli,$sql);
-    echo 'true';
+    echo 'update';
 }
 
 

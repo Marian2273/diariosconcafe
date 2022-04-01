@@ -105,7 +105,7 @@ $("#formulariocontacto").validate({
                                                                         Swal.fire({icon: 'success', 
                                                                         title: '<span style="font-size:16px;"> Su Mensaje fue enviado con éxito.<br> Muchas Gracias! </span>', 
                                                                         showConfirmButton: true, 
-                                                                        confirmButtonColor: '#27ce4b', 
+                                                                        confirmButtonColor: '#15b29f', 
                                                                          }).then(function(){ 
                                                                         location.reload();
                                                                         });

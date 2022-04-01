@@ -16,10 +16,14 @@
                 <li><a href="perfil-usuario.php" class="link-blanco"> Detalles de Suscripción </a></li>
                 <li><a href="editar-perfil.php"class="link-blanco" > Editar Perfil del usuario</a></li>
             </ul>
+            <div class="well">
+          <span> Para cambiar la dirección de mail, el tipo de suscripción, ó consultas relacionadas, por favor mandanos un mail a <a href="mailto:suscripciones@diariosconcafe.com" class="verde" target="_blank" >suscripciones@diariosconcafe.com</a> </span>
+          </div>
         </div>
+        
  <div class="col-md-8">
             
-          
+         
                
             <div class="login-form">
                             <form method="post" id="registro-form" role="form" autocomplete="off" enctype="multipart/form-data">

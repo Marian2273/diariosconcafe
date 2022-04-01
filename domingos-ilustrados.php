@@ -6,8 +6,8 @@
 
         <div class="row">
             <div class="col-md-12 col-sm-12">
-            <img src="img/cafecito.png" alt="diarios con café">
-            <h4 class="verde">DOMINGOS ILUSTRADOS</h4>
+            <img src="img/cafecito.png" alt="diarios con café" class="icono-cafecito">
+            <h4 class="verde titulo-verde">DOMINGOS ILUSTRADOS</h4>
           
           </div>
 

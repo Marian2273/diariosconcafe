@@ -845,7 +845,7 @@ footer .footer-manu ul li a:hover {
 
 .semana-de-prueba{
  
- padding:4px 15px;
+ padding:9px 15px;
 }
 .semana-de-prueba a{
  border-radius: 0px 0px 16px 16px; 
@@ -1206,6 +1206,10 @@ footer .footer-manu ul .zoom-social_icons-list__item
   float:left;
   width: 29%;
 }
+.noticias-link{
+  margin-top:50px;
+  float:left;
+}
 /* Sección Conocenos */
 #accordion{
  
@@ -1476,4 +1480,19 @@ text-align: left;
   border-radius: 10px;
   color:#fff;
   font-weight: 500;
+}
+.icono-cafecito{
+  width: 90px!important;
+ 
+}
+.titulo-verde{
+ 
+  padding-top: 12px;
+  margin-bottom: 20px;
+}
+.well{
+  background-color:transparent;
+  margin-top: 40px;
+  border-color:#0fe3bc;
+  font-size: 15px;
 }

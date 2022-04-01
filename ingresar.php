@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-            <img src="img/cafecito.png" alt="diarios con café">
-            <h4 class="verde">Iniciar Sesión</h4>
+            <img src="img/cafecito.png"  class="icono-cafecito" alt="diarios con café">
+            <h4 class="verde titulo-verde">Iniciar Sesión</h4>
             <div class="login-form">
                             <form method="post" id="formulariologin" role="form" autocomplete="off" enctype="multipart/form-data">
                                 <div class="form-group">

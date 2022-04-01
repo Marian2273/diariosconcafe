@@ -14,8 +14,15 @@
             <ul>
                 <li><a href="perfil-usuario.php" class="link-blanco"> Detalles de Suscripción </a></li>
                 <li><a href="editar-perfil.php"class="link-blanco" >Editar perfil del Usuario</a></li>
+               
+                
             </ul>
+            <div class="well">
+            <span> Si todavía no pagaste, podés hacerlo <a href="<?php echo get_plan(get_user_info($user_cafe, id_nivel));?>" class="link-verde"> acá </a> </span>
+            </div>
+          
         </div>
+
       <div class="col-md-8 col-sm-8">
                        
                    

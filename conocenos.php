@@ -4,9 +4,9 @@
 <section class="conocenos">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12">
-            <img src="img/cafecito.png" alt="diarios con café">
-            <h4 class="verde">SOBRE EL PROYECTO</h4>
+            <div class= "col-md-12 col-sm-12">
+            <img src="img/cafecito.png" alt="diarios con café" class="icono-cafecito">
+            <h4 class="verde titulo-verde">SOBRE EL PROYECTO</h4>
           
           </div>
 
@@ -104,12 +104,12 @@
 </div>
 </section>
 
-<section class="resumen">
+<section class="conocenos">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-            <img src="img/cafecito.png" alt="diarios con café">
-            <h4 class="verde">PREGUNTAS FRECUENTES</h4>
+            <img src="img/cafecito.png" alt="diarios con café" class="icono-cafecito">
+            <h4 class="verde titulo-verde">PREGUNTAS FRECUENTES</h4>
           
           </div>
 

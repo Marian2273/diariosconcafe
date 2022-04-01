@@ -226,7 +226,26 @@ if (!function_exists('get_info')) {
             }
   }
 }
+ //Función Plan Link
+ if (!function_exists('get_plan')) {
+  function get_plan($id) {
+      global $mysqli;
+      
+      $id = $id;
+     
+     if($id == 7){
+       $link="ver-suscripciones-expreso.php";
+     }else if($id == 8){
+       $link="ver-suscripciones-cortado.php";
+     }else if($id == 9){
+       $link ="/ver-suscripciones-con-leche.php";
 
+     }else if($id == 10){
+       $link="ver-suscripciones-grupal.php";
+     }
+     return $link;
+}
+}
 /*
 // Get Admin Info
 if (!function_exists('get_admin')) {

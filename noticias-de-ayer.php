@@ -40,15 +40,15 @@
         <hr>  
         <div class="listado-noticias">
          
-          <p>(listado con links a los últimos 30 envíos)</p>
-          <p>Este es el listado del último mes. Si tenés una suscripción, podés acceder al
-              archivo completo en este <a href="" class="verde">link.</a> 
-          </p>
+         
+         
           <ul class="col-md-12 ">
             <script  src="//diariosconcafe.us1.list-manage.com/generate-js/?u=50d1b98d85b86ac4d7edaaade&amp;fid=63510&amp;show=30" type="text/javascript">
           </script>
             </ul>
-       
+            <p class="noticias-link" >Este es el listado del último mes. Si tenés una suscripción, podés acceder al
+              archivo completo en este <a href="noticias-de-ayer-completo.php" class="verde">link.</a> 
+          </p>
        
         
         </div>
