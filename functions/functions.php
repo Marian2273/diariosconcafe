@@ -11,7 +11,10 @@ $actual_link = $_SERVER['PHP_SELF'];
 $path = parse_url($actual_link , PHP_URL_PATH);
 $filename = substr(strrchr($path, "/"), 1);
 
-
+/*
+SECRET_API_KEY_ReCaptchGoogle = 6Le03n0eAAAAAPdXqXVbKdG3vfBqfi3sxDTSS_N6
+SITE_API_KEY_ReCaptchGoogle = 6Le03n0eAAAAAPvJr46Tq6U9BnQpMEICuIJNy1rK
+*/
 
 use voku\helper\AntiXSS;
 require_once __DIR__ . '/vendor/autoload.php'; // example path

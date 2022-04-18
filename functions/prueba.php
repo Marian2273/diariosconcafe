@@ -1,32 +1,33 @@
 <?php
 
 
-$email = 'mm@mm.com';
+$email = 'marianabelgrano@dds.com.ar';
 $list_id = '01db3626e5';
-$api_key = '';
+$api_key = '58ef90a70d5afcefcdab428ee67be84c-us5';
 $nombre='Mariana';
 $apellido='Belgrano';
 //b11102d355 (suscripcion) (ID de la lista)
-$expreso='c6b98acc71';
+$expreso= "c6b98acc71";
 $cortado ='13fcb2e4e4';
 $conleche='87d8b25b59';
 $grupal='ba3e1ca403';
- 
+
+
 $data_center = substr($api_key,strpos($api_key,'-')+1);
- 
-$url = 'https://'. $data_center .'.api.mailchimp.com/3.0/lists/'. $list_id .'/members';
+
+$url = 'https://us5.api.mailchimp.com/3.0/lists/'. $list_id .'/members';
  
 $json = json_encode([
     'email_address' => $email,
     'status'        => 'subscribed', //pass 'subscribed' or 'pending'
     
     'merge_fields'  => [
-        'FNAME' => $nombre,
-        'LNAME' => $apellido,
+        'FNAME' => $nombre, 
+        'LNAME' => $apellido
         
     ],
     "interests" => array(
-      $expreso => true
+        $conleche => true, //expreso
   )
     
     

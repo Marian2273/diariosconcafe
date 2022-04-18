@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <script>
+
+            $('document').ready(function () {
+
+                $("#olvido").validate({
+
+                    rules: {
+
+                        email: {
+                            required: true,
+                            validemail: true
+                        }
+                    },
+                    messages: {
+
+                        email: {
+                            required: "Please enter an email address",
+                            validemail: "Enter a valid email "
+                        }
+
+                    },
+                    errorPlacement: function (error, element) {
+                        $(element)
+                            .closest('.form-group')
+                            .find('.help-block')
+                            .html(error.html());
+                    },
+                    highlight: function (element) {
+                        $(element)
+                            .closest('.form-group')
+                            .removeClass('has-success')
+                            .addClass('has-error');
+                    },
+                    unhighlight: function (element, errorClass, validClass) {
+                        $(element)
+                            .closest('.form-group')
+                            .removeClass('has-error')
+                            .addClass('has-success');
+                        $(element)
+                            .closest('.form-group')
+                            .find('.help-block')
+                            .html('');
+                    },
+
+                    submitHandler: function (form) {
+
+                        var formData = $(form).serialize();
+
+                        $(form).ajaxSubmit({
+
+                            type: 'POST',
+                            url: 'functions/forgot.php',
+                            data: formData,
+                            success: function (html) {
+                                if (html == 'true') {
+                                    //$("#add_err").html("<span> Su  Éxito.</span>");
+                                    $("#add_err2").html(html);
+
+                                } else {
+
+                                    $("#add_err2").addClass('help-block');
+                                    $("#add_err2").html(html);
+
+                                }
+                            },
+                            beforeSend: function () {
+                                $(".content-inner-all").addClass('opacity-b');
+                                $("#add_err2").html("Processing ...");
+
+                            }
+
+                        });
+
+                    } // end submit handler
+                });
+
+            });
+        </script>
+        <style>
+            .olvido {
+                margin: 40px;
+            }
+            .olvido input {
+                width: 400px;
+            }
+            .olvido .enviar {
+                background-color: #18449c;
+                color: #fff;
+                border:1px solid  #18449c;
+            }
+            .exito{
+                color:green;
+                padding: 5px 0px;
+            }
+            #add_err2{
+                float: left;
+                width: 100%;
+                padding:15px 5px;
+                font-size: 15px;
+            }
+            .error{
+             
+                padding: 5px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="olvido">
+            <div class="container">
+                <form method="post" id="olvido" enctype="multipart/form-data">
+                    <div class="form-group has-success">
+                        <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="E-mail"/>
+                        <span id="error" class="help-block"></span>
+                    </div>
+                    <input type="submit" class="form-control enviar" value="SEND"/>
+                    <div id="add_err2" class="col-lg-12"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

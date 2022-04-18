@@ -1,0 +1,4 @@
+Usuario: maria209_user_diarios	
+Base: maria209_diarios
+Clave: Diarios4ever!
+
